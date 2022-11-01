@@ -29,6 +29,7 @@ function onScroll(e) {
 
 const navbarClasses = computed(() => ({
   "backdrop-blur bg-slate-900/75": windowTop.value > 100,
+  "bg-transparent": windowTop.value <= 100,
 }));
 
 const navbarLinkClasses = computed(() => ({
@@ -48,14 +49,12 @@ onUnmounted(() => {
   <header
     class="
       navbar-default navbar-fixed
-      bg-skin-fill
       text-skin-base
       py-3
       sticky
       transition-colors
       duration-500
       top-0
-      bg-transparent
     "
     :class="navbarClasses"
   >
