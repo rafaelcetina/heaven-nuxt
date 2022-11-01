@@ -1,49 +1,47 @@
 export default defineNuxtConfig({
-  buildModules: ['@vueuse/nuxt', '@nuxtjs/strapi'],
+  buildModules: ["@vueuse/nuxt", "@nuxtjs/strapi"],
   modules: [
-    '@nuxtjs/tailwindcss',
-    '@nuxt/content',
-    '@pinia/nuxt',
-    'nuxt-icon',
-    '@nuxtjs/i18n',
+    "@nuxtjs/tailwindcss",
+    "@nuxt/content",
+    "@pinia/nuxt",
+    "nuxt-icon",
+    "@nuxtjs/i18n",
   ],
   strapi: {
-    url: process.env.STRAPI_URL || 'https://bapi.warsono.id',
-    prefix: '/api',
-    version: 'v4',
+    url: process.env.STRAPI_URL || "http://localhost:1337",
+    prefix: "/api",
+    version: "v4",
     cookie: {},
   },
   i18n: {
-    locales: ['en', 'id'],
-    defaultLocale: 'en',
+    locales: ["es", "en"],
+    defaultLocale: "es",
     vueI18n: {
       legacy: false,
-      locale: 'en',
+      locale: "es",
       messages: {
-        en: {
-          app_name: 'Nuxt Tailwind Kit',
-          app_description:
-            'Quick Boilerplate built on top of Nuxt 3 and Tailwind CSS',
-          menu_home: 'Home',
-          menu_store: 'Store',
-          menu_blog: 'Blog',
-          menu_dashboard: 'Dashboard',
+        es: {
+          app_name: "Heaven Bienes Raices",
+          app_description: "Sitio web para compra y venta de bienes raices",
+          menu_home: "Inicio",
+          menu_store: "Store",
+          menu_blog: "Blog",
+          menu_dashboard: "Dashboard",
         },
-        id: {
-          app_name: 'Nuxt Tailwind Kit',
-          app_description:
-            'Boilerplate cepat yang dibangun dari Nuxt 3 and Tailwind CSS',
-          menu_home: 'Beranda',
-          menu_store: 'Toko',
-          menu_blog: 'Blog',
-          menu_dashboard: 'Dasbor',
+        en: {
+          app_name: "Heaven Bienes Raices",
+          app_description: "Sitio web para compra y venta de bienes raices",
+          menu_home: "Home",
+          menu_store: "Store",
+          menu_blog: "Blog",
+          menu_dashboard: "Dashboard",
         },
       },
     },
   },
   runtimeConfig: {
     public: {
-      gaId: '',
+      gaId: "",
     },
   },
 });

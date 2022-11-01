@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import type { Post } from '~/types';
-import type { Strapi4Response } from '@nuxtjs/strapi';
+import type { Post } from "~/types";
+import type { Strapi4Response } from "@nuxtjs/strapi";
 
 const { findOne } = useStrapi4();
 
 const route = useRoute();
 const id = String(route.params.id);
 
-const response = await findOne<Strapi4Response<Post>>('articles', id, {
-  populate: ['image']
+const response = await findOne<Strapi4Response<Post>>("articles", id, {
+  populate: ["image"],
 });
 const post = response.data;
 
@@ -16,19 +16,19 @@ useHead({
   title: post.attributes.title,
   meta: [
     {
-      name: 'description',
-      content: post.attributes.body.substr(300)
+      name: "description",
+      content: post.attributes.body.substr(300),
     },
     {
-      name: 'og:image',
-      content: getStrapiUrl(post.attributes.image)
-    }
-  ]
-})
+      name: "og:image",
+      content: getStrapiUrl(post.attributes.image),
+    },
+  ],
+});
 </script>
 
 <template>
-  <div class="mx-auto py-4">
+  <div class="mx-auto py-4 mt-10">
     <div class="text-center mb-10">
       <h1 class="text-4xl text-blue-600 font-bold mb-3">
         {{ post.attributes.title }}

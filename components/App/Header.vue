@@ -1,37 +1,63 @@
 <script setup lang="ts">
+import { onMounted, onUnmounted } from "vue";
 const isOpen = ref(false);
+const windowTop = ref(0);
 
 const menus = ref([
   {
-    text: 'menu_home',
-    to: '/',
+    text: "menu_home",
+    to: "/",
   },
   {
-    text: 'menu_store',
-    to: '/store',
+    text: "menu_store",
+    to: "/store",
   },
   {
-    text: 'menu_blog',
-    to: '/blog',
+    text: "menu_blog",
+    to: "/blog",
   },
   {
-    text: 'menu_dashboard',
-    to: '/dashboard',
+    text: "menu_dashboard",
+    to: "/dashboard",
   },
 ]);
+
+function onScroll(e) {
+  windowTop.value =
+    window.top.scrollY; /* or: e.target.documentElement.scrollTop */
+}
+
+const navbarClasses = computed(() => ({
+  "backdrop-blur bg-slate-900/75": windowTop.value > 100,
+}));
+
+const navbarLinkClasses = computed(() => ({
+  "!text-white": windowTop.value > 100,
+}));
+
+onMounted(() => {
+  window.addEventListener("scroll", onScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", onScroll);
+});
 </script>
 
 <template>
   <header
     class="
-      navbar-default
+      navbar-default navbar-fixed
       bg-skin-fill
       text-skin-base
       py-3
-      border-b
       sticky
+      transition-colors
+      duration-500
       top-0
+      bg-transparent
     "
+    :class="navbarClasses"
   >
     <div
       class="
@@ -46,8 +72,12 @@ const menus = ref([
         justify-between
       "
     >
-      <NuxtLink to="/" class="font-bold text-skin-muted text-lg">
-        {{ $t('app_name') }}
+      <NuxtLink
+        to="/"
+        class="font-bold text-skin-muted text-lg"
+        :class="navbarLinkClasses"
+      >
+        {{ $t("app_name") }}
       </NuxtLink>
       <button
         class="appearance-none px-2 py-2 rounded sm:hidden"
@@ -91,8 +121,9 @@ const menus = ref([
               hover:bg-skin-fill-hover
               transition
               duration-200
-              font-medium
+              font-bold
             "
+            :class="navbarLinkClasses"
             exact-active-class="bg-skin-fill-active text-skin-active"
           >
             {{ $t(menu.text) }}
@@ -115,11 +146,16 @@ const menus = ref([
 
 <style scoped>
 .navbar-default {
-  --color-text-base: #484848;
+  --color-text-base: #1d4ed8;
   --color-text-active: #ffffff;
   --color-text-hover: #ffffff;
   --color-text-muted: #1d4ed8;
   --color-fill-hover: #1d4ed8;
   --color-fill-active: #1d4ed8;
+}
+.navbar-fixed {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
 }
 </style>

@@ -9,7 +9,16 @@ const isHome = computed(() => route.path === "/");
     :class="isHome ? 'bg-blue-700 text-white' : 'mt-10 text-black'"
   >
     <div
-      class="container py-4 mx-auto flex flex-col sm:flex-row justify-between gap-2 sm:items-center"
+      class="
+        container
+        py-4
+        mx-auto
+        flex flex-col
+        sm:flex-row
+        justify-between
+        gap-2
+        sm:items-center
+      "
       :class="isHome ? '' : 'border-t'"
     >
       <NuxtLink
@@ -28,11 +37,11 @@ const isHome = computed(() => route.path === "/");
       <div class="text-sm">
         {{ $t("app_name") }} by
         <a
-          href="https://github.com/gravitano"
+          href="https://github.com/rafaelcetina"
           class="font-semibold"
           :class="isHome ? 'text-white' : 'text-gray-800'"
         >
-          Warsono
+          rcetina
         </a>
         . All rights reserved
       </div>
