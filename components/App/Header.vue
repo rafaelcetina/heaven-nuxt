@@ -13,8 +13,8 @@ const menus = ref([
     to: "/store",
   },
   {
-    text: "menu_blog",
-    to: "/blog",
+    text: "menu_swiper",
+    to: "/swiper",
   },
   {
     text: "menu_dashboard",

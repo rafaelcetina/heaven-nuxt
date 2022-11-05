@@ -27,6 +27,7 @@ export default defineNuxtConfig({
           menu_store: "Store",
           menu_blog: "Blog",
           menu_dashboard: "Dashboard",
+          menu_swiper: "Swiper",
         },
         en: {
           app_name: "Heaven Bienes Raices",
@@ -35,6 +36,7 @@ export default defineNuxtConfig({
           menu_store: "Store",
           menu_blog: "Blog",
           menu_dashboard: "Dashboard",
+          menu_swiper: "Swiper",
         },
       },
     },
@@ -44,4 +46,5 @@ export default defineNuxtConfig({
       gaId: "",
     },
   },
+  transpile: ["unist-builder"],
 });
