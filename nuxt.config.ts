@@ -21,7 +21,7 @@ export default defineNuxtConfig({
       locale: "es",
       messages: {
         es: {
-          app_name: "Heaven Bienes Raices",
+          app_name: "JeBem Bienes Raices",
           app_description: "Sitio web para compra y venta de bienes raices",
           menu_home: "Inicio",
           menu_store: "Store",
@@ -30,7 +30,7 @@ export default defineNuxtConfig({
           menu_swiper: "Swiper",
         },
         en: {
-          app_name: "Heaven Bienes Raices",
+          app_name: "JeBem Bienes Raices",
           app_description: "Sitio web para compra y venta de bienes raices",
           menu_home: "Home",
           menu_store: "Store",
@@ -47,4 +47,9 @@ export default defineNuxtConfig({
     },
   },
   transpile: ["unist-builder"],
+  vite: {
+    optimizeDeps: {
+      exclude: ["date-fns"],
+    },
+  },
 });
