@@ -47,9 +47,4 @@ export default defineNuxtConfig({
     },
   },
   transpile: ["unist-builder"],
-  vite: {
-    optimizeDeps: {
-      exclude: ["date-fns"],
-    },
-  },
 });
