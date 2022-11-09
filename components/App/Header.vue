@@ -17,6 +17,10 @@ const menus = ref([
     to: "/swiper",
   },
   {
+    text: "menu_blog",
+    to: "/blog",
+  },
+  {
     text: "menu_dashboard",
     to: "/dashboard",
   },
