@@ -15,7 +15,7 @@ defineProps<{
 <template>
   <section
     id="hero"
-    :class="`bg-local bg-skin-fill text-white grid place-items-center mt-1 sm:h-[40rem] sm:mt-0 bg-cover hero-${theme}`"
+    :class="`bg-local bg-skin-fill text-white grid place-items-center sm:h-[40rem] h-[30rem] sm:mt-0 bg-cover hero-${theme}`"
     :style="`background-image: url(${image})`"
   >
     <div
@@ -41,14 +41,12 @@ defineProps<{
             sm:text-6xl
             font-bold
             xl:leading-[4rem]
-            text-skin-base
+            text-skin-base text-hero-full
           "
         >
           {{ title }}
         </h1>
-        <p class="text-xl mt-4 mb-14 text-skin-muted">
-          {{ description }}
-        </p>
+        <p class="text-xl mt-4 mb-14 text-skin-muted" v-html="description" />
         <div v-if="buttons" class="space-x-4">
           <Button
             v-for="button in buttons"
@@ -76,5 +74,9 @@ defineProps<{
   --color-text-base: #191919;
   --color-text-muted: #363636;
   --color-fill: #ffffff;
+}
+.text-hero-full {
+  color: white;
+  text-shadow: 2px 2px 5px #191919;
 }
 </style>

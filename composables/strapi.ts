@@ -1,4 +1,4 @@
-import { Image } from '~~/types';
+import { Image } from "~~/types";
 
 export const getStrapiUrl = (image: Image) => {
   const config = useRuntimeConfig();

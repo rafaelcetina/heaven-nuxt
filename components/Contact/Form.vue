@@ -30,7 +30,15 @@ defineProps<{
                 class="flex gap-2 items-center text-white hover:text-blue-300"
               >
                 <div
-                  class="w-10 h-10 bg-white text-blue-600 rounded-full grid place-items-center"
+                  class="
+                    w-10
+                    h-10
+                    bg-white
+                    text-blue-600
+                    rounded-full
+                    grid
+                    place-items-center
+                  "
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +64,15 @@ defineProps<{
                 class="flex gap-2 items-center text-white hover:text-blue-300"
               >
                 <div
-                  class="w-10 h-10 bg-white text-blue-600 rounded-full grid place-items-center"
+                  class="
+                    w-10
+                    h-10
+                    bg-white
+                    text-blue-600
+                    rounded-full
+                    grid
+                    place-items-center
+                  "
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +96,15 @@ defineProps<{
                 class="flex gap-2 items-center text-white hover:text-blue-300"
               >
                 <div
-                  class="w-10 h-10 bg-white text-blue-600 rounded-full grid place-items-center"
+                  class="
+                    w-10
+                    h-10
+                    bg-white
+                    text-blue-600
+                    rounded-full
+                    grid
+                    place-items-center
+                  "
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -115,56 +139,72 @@ defineProps<{
           <form>
             <div class="mb-4">
               <label for="name" class="mb-1 block font-semibold text-white"
-                >Name</label
+                >Nombre</label
               >
               <input
                 class="px-3 py-2 border w-full rounded-md"
                 name="name"
-                label="Name"
-                placeholder="Your name"
+                label="name"
+                placeholder="Su nombre completo"
               />
             </div>
             <div class="mb-4">
               <label for="email" class="mb-1 block font-semibold text-white"
-                >Email</label
+                >Correo electrónico</label
               >
               <input
                 class="px-3 py-2 border w-full rounded-md"
                 name="email"
                 label="Email"
-                placeholder="Your email"
+                placeholder="Su dirección de correo electrónico"
               />
             </div>
             <div class="mb-4">
               <label for="phone" class="mb-1 block font-semibold text-white"
-                >Phone Number</label
+                >Número de teléfono</label
               >
               <input
                 class="px-3 py-2 border w-full rounded-md"
                 type="tel"
                 name="phone"
-                label="Phone Number"
-                placeholder="Your phone number"
+                label="Su número de teléfono"
+                placeholder="Su número de teléfono"
               />
             </div>
             <div class="mb-4">
               <label for="message" class="mb-1 block font-semibold text-white"
-                >Message</label
+                >Mensaje</label
               >
               <textarea
                 rows="4"
                 class="px-3 py-2 border w-full rounded-md"
                 name="message"
                 label="Message"
-                placeholder="Your message"
+                placeholder="Escriba su mensaje"
               ></textarea>
             </div>
 
             <button
               type="submit"
-              class="px-6 py-2.5 w-full cursor-pointer rounded-lg transition duration-300 border text-lg bg-white border-white text-blue-600 font-semibold hover:bg-blue-300 hover:border-blue-300"
+              class="
+                px-6
+                py-2.5
+                w-full
+                cursor-pointer
+                rounded-lg
+                transition
+                duration-300
+                border
+                text-lg
+                bg-white
+                border-white
+                text-blue-600
+                font-semibold
+                hover:bg-blue-300
+                hover:border-blue-300
+              "
             >
-              Submit
+              Enviar
             </button>
           </form>
         </div>

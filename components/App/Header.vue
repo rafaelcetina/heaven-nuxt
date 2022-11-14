@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted } from "vue";
+// @ts-ignore
+import type { Strapi4Response } from "@nuxtjs/strapi";
+const { find } = useStrapi4();
+
 const isOpen = ref(false);
 const windowTop = ref(0);
 
@@ -9,20 +13,8 @@ const menus = ref([
     to: "/",
   },
   {
-    text: "menu_store",
-    to: "/store",
-  },
-  {
-    text: "menu_swiper",
-    to: "/swiper",
-  },
-  {
     text: "menu_blog",
-    to: "/blog",
-  },
-  {
-    text: "menu_dashboard",
-    to: "/dashboard",
+    to: "/propiedades",
   },
 ]);
 
@@ -37,6 +29,10 @@ const navbarClasses = computed(() => ({
 }));
 
 const navbarLinkClasses = computed(() => ({
+  "!sm:text-white": windowTop.value > 100,
+}));
+
+const navbarLinkClassesIcon = computed(() => ({
   "!text-white": windowTop.value > 100,
 }));
 
@@ -47,6 +43,19 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener("scroll", onScroll);
 });
+
+const homePage = ref<any[]>([]);
+try {
+  const response = await find<Strapi4Response<any>>("home", {
+    populate: ["logo"],
+  });
+
+  console.log("Response", response.data);
+
+  homePage.value = response.data.attributes;
+} catch (e) {
+  console.log(e);
+}
 </script>
 
 <template>
@@ -80,15 +89,18 @@ onUnmounted(() => {
         class="font-bold text-skin-muted text-lg"
         :class="navbarLinkClasses"
       >
-        {{ $t("app_name") }}
+        <img :src="getStrapiUrl(homePage.logo)" width="60" alt="" />
       </NuxtLink>
+
       <button
         class="appearance-none px-2 py-2 rounded sm:hidden"
         type="button"
         aria-label="Menu"
         @click="isOpen = !isOpen"
+        :class="navbarLinkClassesIcon"
       >
-        <Icon name="ri:menu-line" class="w-6 h-6" />
+        <!--<Icon name="ri:menu-line" class="w-6 h-6" />-->
+        Menu
       </button>
       <div
         :class="
@@ -125,9 +137,11 @@ onUnmounted(() => {
               transition
               duration-200
               font-bold
+              backdrop-blur
+              bg-slate-900/30
             "
             :class="navbarLinkClasses"
-            exact-active-class="bg-skin-fill-active text-skin-active"
+            exact-active-class="!bg-skin-fill-active text-skin-active"
           >
             {{ $t(menu.text) }}
           </NuxtLink>
@@ -138,7 +152,10 @@ onUnmounted(() => {
                 text-skin-base
                 hover:bg-skin-fill-hover
                 hover:text-skin-hover
+                backdrop-blur
+                bg-slate-900/30
               "
+              :class="navbarLinkClasses"
             />
           </div>
         </nav>
@@ -149,12 +166,12 @@ onUnmounted(() => {
 
 <style scoped>
 .navbar-default {
-  --color-text-base: #1d4ed8;
-  --color-text-active: #ffffff;
+  --color-text-base: #ffffff;
+  --color-text-active: #429fd8;
   --color-text-hover: #ffffff;
-  --color-text-muted: #1d4ed8;
-  --color-fill-hover: #1d4ed8;
-  --color-fill-active: #1d4ed8;
+  --color-text-muted: #429fd8;
+  --color-fill-hover: #429fd8;
+  --color-fill-active: #ffffff;
 }
 .navbar-fixed {
   position: fixed;

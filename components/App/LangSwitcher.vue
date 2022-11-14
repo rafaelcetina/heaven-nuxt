@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const langs = ['en', 'id'];
+const langs = ["es", "en"];
 
 const { locale } = useI18n();
 </script>
@@ -8,7 +8,7 @@ const { locale } = useI18n();
   <select
     v-model="locale"
     class="
-      text-white text-xs
+      text-xs
       bg-transparent
       uppercase
       border border-skin-base

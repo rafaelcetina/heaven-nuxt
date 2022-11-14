@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Post } from '~/types';
+import { Post } from "~/types";
 
 defineProps<{
   post: Post;
@@ -9,8 +9,16 @@ defineProps<{
 <template>
   <NuxtLink
     v-if="post.attributes"
-    class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300"
-    :to="`/blog/posts/${post.id}`"
+    class="
+      bg-white
+      rounded-lg
+      overflow-hidden
+      shadow-md
+      hover:shadow-xl
+      transition
+      duration-300
+    "
+    :to="`/propiedades/posts/${post.id}`"
   >
     <BlogPostImage :image="post.attributes.image" />
     <div class="px-4 py-4">

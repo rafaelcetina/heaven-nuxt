@@ -2,15 +2,15 @@ export default defineEventHandler(() => {
   return {
     hero: {
       theme: "default",
-      title: "Nuxt Tailwind Kit",
-      description: "Nuxt 3 Starter Kit + Tailwind CSS",
+      title: "Compra, venta y renta de bienes raices",
+      description: "Contáctate con nosotros para adquirir tu propiedad",
       image:
-        "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2874&q=80",
+        "http://localhost:1337/uploads/Whats_App_Image_2022_11_01_at_9_52_12_PM_d4f352bf3a.jpeg",
       buttons: [
         {
-          text: "Get Started",
-          action: "#feature",
+          text: "Contáctanos",
           props: {
+            href: "#contact",
             color: "primary",
             size: "xl",
           },
@@ -18,49 +18,55 @@ export default defineEventHandler(() => {
       ],
     },
     about: {
-      title: "About",
+      title: "Aceca de nosotros",
       description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati nesciunt assumenda exercitationem tenetur, sint, perspiciatis dolorem, esse eligendi ad sit id doloremque cum officiis accusamus. Nam ipsum vero fugit esse.",
+        "Jebem bienes raices es una inmobiliaria con la misión de facilitar la compra, venta y renta de bienes raices en el municipio de Calakmul. Nuestra meta es brindarles a compradores y vendedores una plataforma en línea para agilizar la adquisición de bienes.",
       button: {
-        text: "Learn More",
+        text: "Conocer los bienes",
         action: "#feature",
       },
     },
     feature: {
-      title: "Features",
-      description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+      title: "Últimas publicaciones",
+      description:
+        "Contáctate con nosotros para adquirir la propiedad que te interese.",
     },
     features: [
       {
-        name: "Feature 1",
+        name: "Local comercial en el centro",
         description:
-          "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+          "A un costado de la esquina, local comercial con patente de venta de bebidas alcoholicas vigente.",
         image:
-          "https://images.unsplash.com/photo-1446941303752-a64bb1048d54?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "http://localhost:1337/uploads/Whats_App_Image_2022_11_01_at_9_52_12_PM_d4f352bf3a.jpeg",
         imagePosition: "right",
         imageAlt: "",
         theme: "", // default
         items: [
           {
-            title: "Feature 1.1",
-            description: "Description 1.1",
+            title: "Dirección",
+            description: "Av. Xpujil #345",
           },
           {
-            title: "Feature 1.1",
-            description: "Description 1.1",
+            title: "Incluye",
+            description: "Agua, Luz e Internet",
           },
           {
-            title: "Feature 1.1",
-            description: "Description 1.1",
+            title: "Renta mensual",
+            description: "$3,500 MXN",
+          },
+          {
+            title: "Contácto",
+            description: "983-110-1239",
           },
         ],
       },
+      /*
       {
         name: "Feature 2",
         description:
           "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
         image:
-          "https://images.unsplash.com/photo-1614315517650-3771cf72d18a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80",
+          "http://localhost:1337/uploads/Whats_App_Image_2022_11_01_at_9_52_12_PM_d4f352bf3a.jpeg",
         imagePosition: "left",
         imageAlt: "",
         theme: "", // default
@@ -103,6 +109,7 @@ export default defineEventHandler(() => {
           },
         ],
       },
+      */
     ],
     quote: {
       title: "Quote Title",
@@ -110,15 +117,15 @@ export default defineEventHandler(() => {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero enim quis incidunt fugiat, quisquam aspernatur eaque necessitatibus sit ipsum voluptas excepturi rerum in mollitia, iusto, id velit optio commodi odio",
     },
     contact: {
-      title: "Title",
+      title: "Jebem Bienes Raices",
       description:
-        "Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days.",
-      email: "app@example.com",
-      phone: "+62-0000-111-2222",
-      website: "domain.tld",
+        "Llámenos o visitenos en cualquier momento, estaremos encantados de responder cualquier pregunta las 24 horas del día.",
+      email: "contacto@jebem.com",
+      phone: "+52-983-111-2222",
+      website: "jebem.onrender.com",
       form: {
-        title: "Contact Us",
-        description: `Have question? Submit your question on this form bellow and we'll be in touch.`,
+        title: "Contáctanos",
+        description: `¿Aún tienes preguntas? Envíanos tu pregunta llenando el siguiente formulario y nos pondremos en contacto a la brevedad.`,
       },
     },
   };
