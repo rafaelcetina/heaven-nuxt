@@ -1,14 +1,13 @@
 <script setup lang="ts">
 import type { Post } from "~/types";
-//import type { Strapi4Response } from "@nuxtjs/strapi";
-
-//const { findOne } = useStrapi4();
-
 const route = useRoute();
 const id = String(route.params.id);
 
-const { data: post } = await useFetch(`/api/articles/${id}`, {});
-console.log("POST 🧑‍🎄🧑‍🎄", post);
+const { data: posts } = await useFetch(`/api/articles/`, {});
+
+const post = await posts.value.filter((item) => {
+  return item.id === Number(id);
+})[0];
 
 // @ts-ignore
 useHead({
@@ -20,6 +19,7 @@ useHead({
     },
     {
       name: "og:image",
+      // @ts-ignore
       content: getStrapiUrl(post.attributes.image),
     },
   ],
