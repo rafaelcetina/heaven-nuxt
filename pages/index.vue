@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import HeroFull from "../components/HeroFull/HeroFull.vue";
 import type { Post } from "~/types";
 // @ts-ignore
-import type { Strapi4Response } from "@nuxtjs/strapi";
+// import type { Strapi4Response } from "@nuxtjs/strapi";
 
 definePageMeta({
   fullWidth: true,
@@ -22,18 +22,21 @@ const { data } = await useFetch("/api/home", {});
 
 const modules = [Navigation, Pagination, A11y, Autoplay];
 
-const { find } = useStrapi4();
+// const { find } = useStrapi4();
 
 const posts = ref<Post[]>([]);
 try {
+  /*
   const response = await find<Strapi4Response<Post>>("articles", {
     sort: "publishedAt",
     populate: ["image", "author"],
   });
+  */
+  const response = await useFetch("/api/articles", {});
 
-  console.log("Response", response.data);
-
-  posts.value = response.data;
+  // console.log("Response", response.data);
+  // @ts-ignore
+  posts.value = response.data.data;
 } catch (e) {
   console.log(e);
 }

@@ -1,16 +1,22 @@
 <script setup lang="ts">
 import type { Post } from "~/types";
-import type { Strapi4Response } from "@nuxtjs/strapi";
+//import type { Strapi4Response } from "@nuxtjs/strapi";
 
-const { findOne } = useStrapi4();
+//const { findOne } = useStrapi4();
 
 const route = useRoute();
 const id = String(route.params.id);
 
+const response = await useFetch("/api/articles", {});
+/*
 const response = await findOne<Strapi4Response<Post>>("articles", id, {
   populate: ["image"],
 });
-const post = response.data;
+*/
+// @ts-ignore
+const post = response.data.data.filter((item) => {
+  return item.id === id;
+});
 
 useHead({
   title: post.attributes.title,

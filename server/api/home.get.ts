@@ -5,7 +5,7 @@ export default defineEventHandler(() => {
       title: "Compra, venta y renta de bienes raices",
       description: "Contáctate con nosotros para adquirir tu propiedad",
       image:
-        "http://localhost:1337/uploads/Whats_App_Image_2022_11_01_at_9_52_12_PM_d4f352bf3a.jpeg",
+        "https://qzxcfcpyemrhuakuymvj.supabase.co/storage/v1/object/public/jebem/logo.jpeg",
       buttons: [
         {
           text: "Contáctanos",
@@ -37,7 +37,7 @@ export default defineEventHandler(() => {
         description:
           "A un costado de la esquina, local comercial con patente de venta de bebidas alcoholicas vigente.",
         image:
-          "http://localhost:1337/uploads/Whats_App_Image_2022_11_01_at_9_52_12_PM_d4f352bf3a.jpeg",
+          "https://qzxcfcpyemrhuakuymvj.supabase.co/storage/v1/object/public/jebem/logo.jpeg",
         imagePosition: "right",
         imageAlt: "",
         theme: "", // default
@@ -66,7 +66,7 @@ export default defineEventHandler(() => {
         description:
           "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
         image:
-          "http://localhost:1337/uploads/Whats_App_Image_2022_11_01_at_9_52_12_PM_d4f352bf3a.jpeg",
+          "https://qzxcfcpyemrhuakuymvj.supabase.co/storage/v1/object/public/jebem/logo.jpeg",
         imagePosition: "left",
         imageAlt: "",
         theme: "", // default

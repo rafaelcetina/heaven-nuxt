@@ -46,12 +46,15 @@ onUnmounted(() => {
 
 const homePage = ref<any[]>([]);
 try {
+  /*
   const response = await find<Strapi4Response<any>>("home", {
     populate: ["logo"],
   });
+  */
+  const response = await useFetch("/api/header", {});
 
   console.log("Response", response.data);
-
+  // @ts-ignore
   homePage.value = response.data.attributes;
 } catch (e) {
   console.log(e);
@@ -89,7 +92,11 @@ try {
         class="font-bold text-skin-muted text-lg"
         :class="navbarLinkClasses"
       >
-        <img :src="getStrapiUrl(homePage.logo)" width="60" alt="" />
+        <img
+          src="https://qzxcfcpyemrhuakuymvj.supabase.co/storage/v1/object/public/jebem/logo.jpeg"
+          width="60"
+          alt=""
+        />
       </NuxtLink>
 
       <button

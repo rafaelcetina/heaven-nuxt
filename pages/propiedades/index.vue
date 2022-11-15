@@ -1,19 +1,20 @@
 <script setup lang="ts">
 import type { Post } from "~/types";
-import type { Strapi4Response } from "@nuxtjs/strapi";
+// import type { Strapi4Response } from "@nuxtjs/strapi";
 
-const { find } = useStrapi4();
+// const { find } = useStrapi4();
 
 const posts = ref<Post[]>([]);
 try {
+  /*
   const response = await find<Strapi4Response<Post>>("articles", {
     sort: "publishedAt",
     populate: ["image", "author"],
   });
-
-  console.log("Response", response.data);
-
-  posts.value = response.data;
+  */
+  const response = await useFetch("/api/articles", {});
+  // @ts-ignore
+  posts.value = response.data.data;
 } catch (e) {
   console.log(e);
 }
