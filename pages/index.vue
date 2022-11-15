@@ -22,24 +22,7 @@ const { data } = await useFetch("/api/home", {});
 
 const modules = [Navigation, Pagination, A11y, Autoplay];
 
-// const { find } = useStrapi4();
-
-const posts = ref<Post[]>([]);
-try {
-  /*
-  const response = await find<Strapi4Response<Post>>("articles", {
-    sort: "publishedAt",
-    populate: ["image", "author"],
-  });
-  */
-  const response = await useFetch("/api/articles", {});
-
-  // console.log("Response", response.data);
-  // @ts-ignore
-  posts.value = response.data.data;
-} catch (e) {
-  console.log(e);
-}
+const { data: posts } = await useFetch("/api/articles", {});
 </script>
 
 <template>

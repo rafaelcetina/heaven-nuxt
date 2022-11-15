@@ -7,17 +7,10 @@ import type { Post } from "~/types";
 const route = useRoute();
 const id = String(route.params.id);
 
-const response = await useFetch("/api/articles", {});
-/*
-const response = await findOne<Strapi4Response<Post>>("articles", id, {
-  populate: ["image"],
-});
-*/
-// @ts-ignore
-const post = response.data.data.filter((item) => {
-  return item.id === id;
-});
+const { data: post } = await useFetch(`/api/articles/${id}`, {});
+console.log("POST 🧑‍🎄🧑‍🎄", post);
 
+// @ts-ignore
 useHead({
   title: post.attributes.title,
   meta: [
