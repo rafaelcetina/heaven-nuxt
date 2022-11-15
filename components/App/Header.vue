@@ -34,6 +34,7 @@ const navbarLinkClasses = computed(() => ({
 
 const navbarLinkClassesIcon = computed(() => ({
   "!text-white": windowTop.value > 100,
+  "!bg-[#429fd8]": windowTop.value < 100,
 }));
 
 onMounted(() => {
@@ -106,13 +107,13 @@ try {
         @click="isOpen = !isOpen"
         :class="navbarLinkClassesIcon"
       >
-        <!--<Icon name="ri:menu-line" class="w-6 h-6" />-->
-        Menu
+        <Icon name="ri:menu-line" class="w-6 h-6" />
+        <!--Menu-->
       </button>
       <div
         :class="
           isOpen
-            ? 'fixed sm:relative top-16 shadow sm:shadow-none left-4 right-4 rounded-lg overflow-hidden bg-white sm:bg-transparent py-2'
+            ? 'fixed sm:relative top-[4.7rem] shadow sm:shadow-none left-4 right-4 rounded-lg overflow-hidden bg-transparent sm:bg-transparent py-2'
             : 'hidden sm:flex sm:w-6/12'
         "
       >
@@ -175,7 +176,7 @@ try {
 .navbar-default {
   --color-text-base: #ffffff;
   --color-text-active: #429fd8;
-  --color-text-hover: #ffffff;
+  --color-text-hover: #1d4ed8;
   --color-text-muted: #429fd8;
   --color-fill-hover: #429fd8;
   --color-fill-active: #ffffff;
