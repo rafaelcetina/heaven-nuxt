@@ -6,7 +6,9 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "nuxt-icon",
     "@nuxtjs/i18n",
+    "~/modules/sitemap",
   ],
+
   strapi: {
     url: process.env.STRAPI_URL || "http://localhost:1337",
     prefix: "/api",
@@ -47,4 +49,9 @@ export default defineNuxtConfig({
     },
   },
   transpile: ["unist-builder"],
+  sitemap: {
+    // xmlNs: 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
+    hostname: "https://jebembienesraices.com",
+    routes: ["/propiedades"],
+  },
 });

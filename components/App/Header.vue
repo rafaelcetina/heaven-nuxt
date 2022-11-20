@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted } from "vue";
 // @ts-ignore
-import type { Strapi4Response } from "@nuxtjs/strapi";
-const { find } = useStrapi4();
+// import type { Strapi4Response } from "@nuxtjs/strapi";
+// const { find } = useStrapi4();
 
 const isOpen = ref(false);
 const windowTop = ref(0);
@@ -18,8 +18,9 @@ const menus = ref([
   },
 ]);
 
-function onScroll(e) {
+function onScroll(e: any) {
   windowTop.value =
+    // @ts-ignore
     window.top.scrollY; /* or: e.target.documentElement.scrollTop */
 }
 
