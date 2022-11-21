@@ -5,14 +5,15 @@ const { t } = useI18n();
 
 useHead({
   htmlAttrs: { lang: "es" },
-  title: "Jebem Bienes raices",
+  title: "Jebem Bienes raices | Compra, Vende y Renta Propiedades",
   meta: [
     { charset: "utf-8" },
     { name: "viewport", content: "width=device-width, initial-scale=1" },
     {
       hid: "description",
       name: "description",
-      content: "Compra venta y renta de bienes raices en Calakmul",
+      content:
+        "Compra, venta y renta de bienes raices en Calakmul. Publica aquí tu terreno, casa, local o departamento.",
     },
     {
       hid: "keywords",
