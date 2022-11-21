@@ -7,6 +7,7 @@ export default defineEventHandler(() => {
         "Contáctate con nosotros para adquirir tu propiedad: Terreno, Local comercial, Casa o Departamento",
       image:
         "https://qzxcfcpyemrhuakuymvj.supabase.co/storage/v1/object/public/jebem/logo.jpeg",
+      imageAlt: "Logo Jebem",
       buttons: [
         {
           text: "Contáctanos",
