@@ -44,10 +44,16 @@ export default defineNuxtModule({
     });
 
     nuxt.hook("pages:extend", async (pages) => {
-      const sitemap = await generateSitemap(pages);
+      const whiteList = ["propiedades"];
+      const routesToGenerate = pages.filter((page) =>
+        page.path.includes("propiedades")
+      );
+      // console.log("RoutesTG", routesToGenerate);
+
+      const sitemap = await generateSitemap(routesToGenerate);
       createSitemapFile(sitemap, filePath);
       // Added output to confirm that the sitemap has been created at the end of the build process
-      console.log("Sitemap created");
+      // console.log("Sitemap created");
     });
   },
 });

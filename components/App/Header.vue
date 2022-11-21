@@ -55,7 +55,7 @@ try {
   */
   const response = await useFetch("/api/header", {});
 
-  console.log("Response", response.data);
+  // console.log("Response", response.data);
   // @ts-ignore
   homePage.value = response.data.attributes;
 } catch (e) {
