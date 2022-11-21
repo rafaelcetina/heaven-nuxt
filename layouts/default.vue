@@ -4,13 +4,9 @@ import { useI18n } from "vue-i18n";
 const { t } = useI18n();
 
 useHead({
+  htmlAttrs: { lang: "es" },
   title: "Jebem Bienes raices",
   meta: [
-    {
-      htmlAttrs: {
-        lang: "es",
-      },
-    },
     { charset: "utf-8" },
     { name: "viewport", content: "width=device-width, initial-scale=1" },
     {

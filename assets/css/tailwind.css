@@ -1,4 +1,4 @@
-@import 'windplus/styles/main';
+@import "windplus/styles/main";
 
 body {
   @apply text-gray-900 bg-gray-100 dark:text-white;
