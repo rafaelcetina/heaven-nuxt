@@ -10,8 +10,8 @@ useHead({
     { charset: "utf-8" },
     { name: "viewport", content: "width=device-width, initial-scale=1" },
     {
-      hid: "Compra venta y renta de bienes raices en Calakmul",
-      name: "Jebem bienes raices",
+      hid: "description",
+      name: "description",
       content: "Compra venta y renta de bienes raices en Calakmul",
     },
   ],
