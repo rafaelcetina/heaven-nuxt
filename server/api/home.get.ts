@@ -3,7 +3,8 @@ export default defineEventHandler(() => {
     hero: {
       theme: "default",
       title: "Compra, venta y renta de bienes raices",
-      description: "Contáctate con nosotros para adquirir tu propiedad",
+      description:
+        "Contáctate con nosotros para adquirir tu propiedad: Terreno, Local comercial, Casa o Departamento",
       image:
         "https://qzxcfcpyemrhuakuymvj.supabase.co/storage/v1/object/public/jebem/logo.jpeg",
       buttons: [
@@ -20,7 +21,7 @@ export default defineEventHandler(() => {
     about: {
       title: "Aceca de nosotros",
       description:
-        "Jebem bienes raices es una inmobiliaria con la misión de facilitar la compra, venta y renta de bienes raices en el municipio de Calakmul. Nuestra meta es brindarles a compradores y vendedores una plataforma en línea para agilizar la adquisición de bienes.",
+        "Jebem bienes raices es una inmobiliaria con la misión de facilitar la compra, venta y renta de bienes raices en el municipio de Calakmul. Nuestra meta es brindarles a compradores y vendedores una plataforma en línea para agilizar la adquisición de bienes. Publica aqui tu local, terreno, casa o departamento.",
       button: {
         text: "Conocer los bienes",
         action: "#feature",
@@ -29,17 +30,17 @@ export default defineEventHandler(() => {
     feature: {
       title: "Últimas publicaciones",
       description:
-        "Contáctate con nosotros para adquirir la propiedad que te interese.",
+        "Contáctate con nosotros para adquirir la propiedad que te interese. Te presentamos las últimas publicaciones de propiedades en la zona.",
     },
     features: [
       {
         name: "Local comercial en el centro",
         description:
-          "A un costado de la esquina, local comercial con patente de venta de bebidas alcoholicas vigente.",
+          "A un costado de la esquina, local comercial con patente de venta de bebidas alcoholicas vigente. Excelente oportunidad para tí.",
         image:
           "https://qzxcfcpyemrhuakuymvj.supabase.co/storage/v1/object/public/jebem/logo.jpeg",
         imagePosition: "right",
-        imageAlt: "",
+        imageAlt: "Logo Jebem",
         theme: "", // default
         items: [
           {
@@ -47,7 +48,7 @@ export default defineEventHandler(() => {
             description: "Av. Xpujil #345",
           },
           {
-            title: "Incluye",
+            title: "Incluye servicios como",
             description: "Agua, Luz e Internet",
           },
           {
@@ -120,9 +121,9 @@ export default defineEventHandler(() => {
       title: "Jebem Bienes Raices",
       description:
         "Llámenos o visitenos en cualquier momento, estaremos encantados de responder cualquier pregunta las 24 horas del día.",
-      email: "contacto@jebem.com",
+      email: "contacto@jebembienesraices.com",
       phone: "+52-983-111-2222",
-      website: "jebem.onrender.com",
+      website: "jebembienesraices.com",
       form: {
         title: "Contáctanos",
         description: `¿Aún tienes preguntas? Envíanos tu pregunta llenando el siguiente formulario y nos pondremos en contacto a la brevedad.`,

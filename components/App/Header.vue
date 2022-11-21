@@ -65,29 +65,11 @@ try {
 
 <template>
   <header
-    class="
-      navbar-default navbar-fixed
-      text-skin-base
-      py-3
-      sticky
-      transition-colors
-      duration-500
-      top-0
-    "
+    class="navbar-default navbar-fixed text-skin-base py-3 sticky transition-colors duration-500 top-0"
     :class="navbarClasses"
   >
     <div
-      class="
-        container
-        mx-auto
-        pl-4
-        pr-2
-        sm:px-0
-        flex flex-row
-        items-center
-        gap-4
-        justify-between
-      "
+      class="container mx-auto pl-4 pr-2 sm:px-0 flex flex-row items-center gap-4 justify-between"
     >
       <NuxtLink
         to="/"
@@ -97,7 +79,7 @@ try {
         <img
           src="https://qzxcfcpyemrhuakuymvj.supabase.co/storage/v1/object/public/jebem/logo.jpeg"
           width="60"
-          alt=""
+          alt="Logo Jebem"
         />
       </NuxtLink>
 
@@ -119,36 +101,13 @@ try {
         "
       >
         <nav
-          class="
-            flex flex-col
-            sm:relative
-            w-full
-            items-start
-            sm:flex-row
-            sm:justify-end
-            sm:gap-1
-            sm:items-center
-          "
+          class="flex flex-col sm:relative w-full items-start sm:flex-row sm:justify-end sm:gap-1 sm:items-center"
         >
           <NuxtLink
             v-for="menu in menus"
             :key="menu.text"
             :to="menu.to"
-            class="
-              px-4
-              py-2
-              rounded-full
-              w-full
-              sm:w-auto
-              text-skin-base
-              hover:text-skin-hover
-              hover:bg-skin-fill-hover
-              transition
-              duration-200
-              font-bold
-              backdrop-blur
-              bg-slate-900/30
-            "
+            class="px-4 py-2 rounded-full w-full sm:w-auto text-skin-base hover:text-skin-hover hover:bg-skin-fill-hover transition duration-200 font-bold backdrop-blur bg-slate-900/30"
             :class="navbarLinkClasses"
             exact-active-class="!bg-skin-fill-active text-skin-active"
           >
@@ -157,13 +116,7 @@ try {
 
           <div>
             <AppLangSwitcher
-              class="
-                text-skin-base
-                hover:bg-skin-fill-hover
-                hover:text-skin-hover
-                backdrop-blur
-                bg-slate-900/30
-              "
+              class="text-skin-base hover:bg-skin-fill-hover hover:text-skin-hover backdrop-blur bg-slate-900/30"
               :class="navbarLinkClasses"
             />
           </div>

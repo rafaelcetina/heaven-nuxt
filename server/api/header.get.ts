@@ -34,6 +34,7 @@ export default defineEventHandler(() => {
               mime: "image/jpeg",
               size: 16.22,
               url: "https://qzxcfcpyemrhuakuymvj.supabase.co/storage/v1/object/public/jebem/logo.jpeg",
+              alt: "logo Jebem",
               previewUrl: null,
               provider: "local",
               provider_metadata: null,
