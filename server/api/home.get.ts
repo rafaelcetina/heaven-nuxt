@@ -58,7 +58,7 @@ export default defineEventHandler(() => {
           },
           {
             title: "Contácto",
-            description: "983-110-1239",
+            description: "983-102-8726",
           },
         ],
       },
@@ -122,8 +122,8 @@ export default defineEventHandler(() => {
       title: "Jebem Bienes Raices",
       description:
         "Llámenos o visitenos en cualquier momento, estaremos encantados de responder cualquier pregunta las 24 horas del día.",
-      email: "contacto@jebembienesraices.com",
-      phone: "+52-983-111-2222",
+      email: "jebembienesraices@gmail.com",
+      phone: "+52-983-102-8726",
       website: "jebembienesraices.com",
       form: {
         title: "Contáctanos",
