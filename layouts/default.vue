@@ -14,6 +14,11 @@ useHead({
       name: "description",
       content: "Compra venta y renta de bienes raices en Calakmul",
     },
+    {
+      hid: "keywords",
+      name: "keywords",
+      content: "Bienes, Raices, Calakmul, compra, renta, venta, propiedades",
+    },
   ],
   link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
 });
