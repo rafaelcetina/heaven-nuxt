@@ -13,6 +13,15 @@ defineProps<{
     theme?: string;
   }[];
 }>();
+const url = `https://jebembienesraices.com/propiedades/posts/1`;
+const button = {
+  href: `https://wa.me/529833321375?text=Hola%2C%20vi%20esta%20publicaci%C3%B3n%20en%20tu%20p%C3%A1gina%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20la%20propiedad.%0A${url}`,
+  text: "Contáctar",
+  props: {
+    color: "primary",
+    size: "xl",
+  },
+};
 </script>
 
 <template>
@@ -91,6 +100,14 @@ defineProps<{
           />
         </div>
       </div>
+      <Button
+        class="mt-5"
+        target="_blank"
+        :href="button.href"
+        v-bind="button.props"
+      >
+        {{ button.text }}
+      </Button>
     </div>
   </section>
 </template>
