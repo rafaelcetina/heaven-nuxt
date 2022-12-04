@@ -1,6 +1,7 @@
 <script setup lang="ts">
 defineProps<{
   features: {
+    id: string;
     name: string;
     description: string;
     image: string;
@@ -11,9 +12,9 @@ defineProps<{
       description: string;
     }[];
     theme?: string;
-  }[];
+  };
 }>();
-const url = `https://jebembienesraices.com/propiedades/posts/1`;
+const url = `https://jebembienesraices.com/propiedades/posts/`;
 const button = {
   href: `https://wa.me/529833321375?text=Hola%2C%20vi%20esta%20publicaci%C3%B3n%20en%20tu%20p%C3%A1gina%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20la%20propiedad.%0A${url}`,
   text: "Contáctar",
@@ -26,30 +27,29 @@ const button = {
 
 <template>
   <section
-    v-for="feature in features"
-    :key="feature.name"
+    :key="features.name"
     class="px-4 xl:px-0 py-5 sm:py-20 bg-skin-fill text-skin-base"
-    :class="feature.theme"
+    :class="features.theme"
   >
     <div class="container mx-auto">
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-20">
         <div
           :class="
-            feature.imagePosition === 'right'
+            features.imagePosition === 'right'
               ? 'order-2 sm:order-1'
               : 'order-1 sm:order-2'
           "
         >
           <h2 class="text-3xl font-semibold">
-            {{ feature.name }}
+            {{ features.name }}
           </h2>
           <p class="mt-1 text-lg">
-            {{ feature.description }}
+            {{ features.description }}
           </p>
           <div class="mt-8">
             <div class="space-y-6">
               <div
-                v-for="item in feature.items"
+                v-for="item in features.items"
                 :key="item.title"
                 class="flex items-start gap-4"
               >
@@ -87,15 +87,15 @@ const button = {
         </div>
         <div
           :class="
-            feature.imagePosition === 'left'
+            features.imagePosition === 'left'
               ? 'order-2 sm:order-1'
               : 'order-1 sm:order-2'
           "
         >
           <img
             loading="lazy"
-            :src="feature.image"
-            :alt="feature.imageAlt"
+            :src="features.image"
+            :alt="features.imageAlt"
             class="max-w-full lg:max-w-md mx-auto rounded-lg border"
           />
         </div>
@@ -103,7 +103,7 @@ const button = {
       <Button
         class="mt-5"
         target="_blank"
-        :href="button.href"
+        :href="button.href + features.id"
         v-bind="button.props"
       >
         {{ button.text }}

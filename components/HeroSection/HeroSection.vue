@@ -15,42 +15,15 @@ defineProps<{
 <template>
   <section
     id="hero"
-    class="
-      bg-skin-fill
-      text-white
-      sm:h-[75vh]
-      grid
-      place-items-center
-      -mt-1
-      sm:mt-0
-    "
+    class="bg-skin-fill text-white sm:h-[75vh] grid place-items-center -mt-1 sm:mt-0"
     :class="`hero-${theme}`"
   >
     <div
-      class="
-        container
-        mx-auto
-        px-4
-        xl:px-0
-        flex flex-col
-        sm:flex-row
-        items-center
-        justify-between
-        gap-6
-        sm:gap-20
-        py-6
-        sm:py-20
-      "
+      class="container mx-auto px-4 xl:px-0 flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-20 py-6 sm:py-20"
     >
       <div class="w-full sm:w-6/12">
         <h1
-          class="
-            text-4xl
-            sm:text-6xl
-            font-bold
-            xl:leading-[4rem]
-            text-skin-base
-          "
+          class="text-4xl sm:text-6xl font-bold xl:leading-[4rem] text-skin-base"
         >
           {{ title }}
         </h1>
@@ -71,7 +44,7 @@ defineProps<{
         <img
           loading="lazy"
           :src="image"
-          alt=""
+          alt="image-description"
           class="w-auto max-w-full rounded-lg"
         />
       </div>

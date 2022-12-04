@@ -77,7 +77,14 @@ useHead({
         <div class="text-sm dark:text-gray-500 text-gray-500">
           <span class="font-semibold"> Jebem bienes raices </span>
           &middot;
-          {{ new Date(post.attributes.publishedAt).toLocaleString() }}
+          {{
+            new Date(post.attributes.publishedAt).toLocaleDateString("es-MX", {
+              weekday: "long",
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })
+          }}
         </div>
         <Button
           class="mt-5"

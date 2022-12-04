@@ -18,11 +18,23 @@ const buttonProps = {
   size: "xl",
 };
 
+const buttonPropiedades = {
+  text: "Ver propiedades",
+  href: "/propiedades",
+  props: { color: "primary", size: "xl" },
+};
+
 const { data } = await useFetch("/api/home", {});
 
 const modules = [Navigation, Pagination, A11y, Autoplay];
 
 const { data: posts } = await useFetch("/api/articles", {});
+
+const someReactiveRef = ref(null);
+const limit = 5;
+const computedPosts = computed(() => {
+  return limit ? posts.value.slice(0, limit) : posts;
+});
 </script>
 
 <template>
@@ -61,8 +73,21 @@ const { data: posts } = await useFetch("/api/articles", {});
     <HomeAbout v-bind="data.about" />
 
     <SectionHeader v-bind="data.feature" id="feature" />
+    <div v-for="post in posts" :key="post.id">
+      <HomeFeatures :features="post.features" />
+    </div>
+    <div class="mx-auto py-2 mt-1">
+      <div class="text-center mb-1">
+        <Button
+          class="mt-0 text-center"
+          :href="buttonPropiedades.href"
+          v-bind="buttonProps"
+        >
+          {{ buttonPropiedades.text }}
+        </Button>
+      </div>
+    </div>
 
-    <HomeFeatures :features="data.features" />
     <!--
     <HomeQuote v-bind="data.quote" />
     -->
