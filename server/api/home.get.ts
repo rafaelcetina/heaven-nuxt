@@ -35,30 +35,27 @@ export default defineEventHandler(() => {
     },
     features: [
       {
-        name: "Local comercial en el centro",
+        name: "Casa en venta",
         description:
-          "A un costado de la esquina, local comercial con patente de venta de bebidas alcoholicas vigente. Excelente oportunidad para tí.",
+          "El frente 16m, al este 32m, al norte 10m y al oeste 19m. Excelente oportunidad para tí.",
         image:
-          "https://qzxcfcpyemrhuakuymvj.supabase.co/storage/v1/object/public/jebem/logo.jpeg",
+          "https://qzxcfcpyemrhuakuymvj.supabase.co/storage/v1/object/public/jebem/casa-palmas/3.jpeg",
         imagePosition: "right",
         imageAlt: "Logo Jebem",
         theme: "", // default
         items: [
           {
             title: "Dirección",
-            description: "Av. Xpujil #345",
+            description:
+              "Calle Halaltun s/n entre Hocolwitz y Oxpecmul. CP: 24640",
           },
           {
-            title: "Incluye servicios como",
-            description: "Agua, Luz e Internet",
-          },
-          {
-            title: "Renta mensual",
-            description: "$3,500 MXN",
+            title: "Precio de venta",
+            description: "$500,000 MXN",
           },
           {
             title: "Contácto",
-            description: "983-102-8726",
+            description: "983 332 1375",
           },
         ],
       },

@@ -45,7 +45,13 @@ const { data: posts } = await useFetch("/api/articles", {});
           :title="`${post.attributes.title}`"
           :description="post.attributes.body"
           :image="getStrapiUrl(post.attributes.image)"
-          :buttons="[{ text: 'Contactar', action: '#', props: buttonProps }]"
+          :buttons="[
+            {
+              text: 'Más detalles',
+              href: `propiedades/posts/${post.id}`,
+              props: buttonProps,
+            },
+          ]"
         />
       </swiper-slide>
     </swiper>

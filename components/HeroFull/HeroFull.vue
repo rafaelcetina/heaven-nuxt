@@ -6,6 +6,7 @@ defineProps<{
   buttons?: {
     text: string;
     action?: string;
+    href?: string;
     props?: Record<string, any>;
   }[];
   theme?: string;
@@ -15,34 +16,15 @@ defineProps<{
 <template>
   <section
     id="hero"
-    :class="`bg-local bg-skin-fill text-white grid place-items-center sm:h-[40rem] h-[30rem] sm:mt-0 bg-cover hero-${theme}`"
+    :class="`bg-local bg-skin-fill text-white grid place-items-center sm:h-[50rem] h-[45rem] sm:mt-0 bg-cover hero-${theme}`"
     :style="`background-image: url(${image})`"
   >
     <div
-      class="
-        container
-        mx-auto
-        px-4
-        xl:px-0
-        flex flex-col
-        sm:flex-row
-        items-center
-        justify-between
-        gap-6
-        sm:gap-20
-        py-6
-        sm:py-20
-      "
+      class="container mx-auto px-4 xl:px-0 flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-20 py-6 sm:py-20"
     >
       <div class="w-full sm:w-6/12">
         <h1
-          class="
-            text-4xl
-            sm:text-6xl
-            font-bold
-            xl:leading-[4rem]
-            text-skin-base text-hero-full
-          "
+          class="text-4xl sm:text-6xl font-bold xl:leading-[4rem] text-skin-base text-hero-full"
         >
           {{ title }}
         </h1>
@@ -51,6 +33,7 @@ defineProps<{
           <Button
             v-for="button in buttons"
             :key="button.text"
+            :href="button.href"
             v-bind="button.props"
           >
             {{ button.text }}
