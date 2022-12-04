@@ -78,7 +78,9 @@ defineProps<{
         </div>
         <div
           :class="
-            feature.imagePosition === 'left' ? 'order-2 sm:order-1' : 'order-1 sm:order-2'
+            feature.imagePosition === 'left'
+              ? 'order-2 sm:order-1'
+              : 'order-1 sm:order-2'
           "
         >
           <img

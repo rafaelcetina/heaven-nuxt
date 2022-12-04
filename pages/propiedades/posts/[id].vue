@@ -95,9 +95,8 @@ useHead({
         class="rounded mb-8"
       /-->
 
-      <article class="prose prose-blue dark:prose-invert max-w-full">
-        <HomeFeatures class="mx-20" :features="post.features" />
-      </article>
+      <article class="prose prose-blue dark:prose-invert max-w-full"></article>
+      <HomeFeatures class="mx-20" :features="post.features" />
     </div>
   </div>
 </template>
