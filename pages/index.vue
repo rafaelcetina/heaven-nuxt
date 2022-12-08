@@ -41,6 +41,7 @@ const computedPosts = computed(() => {
   <div>
     <swiper
       :modules="modules"
+      navigation
       :centeredSlides="true"
       :autoplay="{
         delay: 3500,

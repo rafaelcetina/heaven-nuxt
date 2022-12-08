@@ -102,7 +102,7 @@ export default defineEventHandler(() => {
         title: "¡Oportunidad! Casa en venta",
         excerpt: "Precio: $650,000 MXN",
         slug: "casa-azul",
-        body: "<strong>Precio: </strong> $650,000 MXN",
+        body: "<strong>Precio: </strong> $650,000 MXN <br> Dos cuartos, un baño, sala y cocina completa",
         createdAt: "2022-11-07T22:07:44.308Z",
         updatedAt: "2022-11-13T03:57:54.051Z",
         publishedAt: "2022-12-07T22:10:22.775Z",
@@ -197,6 +197,11 @@ export default defineEventHandler(() => {
         imageAlt: "Logo Jebem",
         theme: "", // default
         items: [
+          {
+            title: "Descripción",
+            description:
+              "Cuenta con dos cuartos, un baño, sala y cocina completa",
+          },
           {
             title: "Dirección",
             description:

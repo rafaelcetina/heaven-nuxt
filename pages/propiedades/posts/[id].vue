@@ -54,6 +54,7 @@ useHead({
         delay: 3500,
         disableOnInteraction: true,
       }"
+      navigation
       :pagination="{
         clickable: true,
       }"
