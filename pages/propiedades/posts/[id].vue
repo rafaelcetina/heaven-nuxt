@@ -104,7 +104,7 @@ useHead({
       /-->
 
       <article class="prose prose-blue dark:prose-invert max-w-full"></article>
-      <HomeFeatures class="mx-20" :features="post.features" />
+      <HomeFeatures class="mx-5 md:mx-20" :features="post.features" />
     </div>
   </div>
 </template>
