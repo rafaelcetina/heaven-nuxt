@@ -3,7 +3,7 @@ export default defineEventHandler(() => {
     {
       id: 1,
       attributes: {
-        title: "Casa en venta",
+        title: "¡Aprovecha! Casa en venta",
         excerpt: "Precio: $500,000 MXN",
         slug: "casa-palmas",
         body: "<strong>Precio: </strong> $500,000 MXN",
@@ -88,6 +88,123 @@ export default defineEventHandler(() => {
           {
             title: "Precio de venta",
             description: "$500,000 MXN",
+          },
+          {
+            title: "Contácto",
+            description: "983 332 1375",
+          },
+        ],
+      },
+    },
+    {
+      id: 2,
+      attributes: {
+        title: "¡Oportunidad! Casa en venta",
+        excerpt: "Precio: $650,000 MXN",
+        slug: "casa-azul",
+        body: "<strong>Precio: </strong> $650,000 MXN",
+        createdAt: "2022-11-07T22:07:44.308Z",
+        updatedAt: "2022-11-13T03:57:54.051Z",
+        publishedAt: "2022-12-07T22:10:22.775Z",
+        locale: "es-MX",
+        image: {
+          data: {
+            attributes: {
+              name: "casa-azul-1.jpeg",
+              alternativeText: "casa-azul-1.jpeg",
+              formats: {
+                thumbnail: {
+                  url: "https://qzxcfcpyemrhuakuymvj.supabase.co/storage/v1/object/public/jebem/casa-azul/1_tn.jpg",
+                },
+              },
+              url: "https://qzxcfcpyemrhuakuymvj.supabase.co/storage/v1/object/public/jebem/casa-azul/1.jpeg",
+            },
+          },
+        },
+      },
+      gallery: [
+        {
+          data: {
+            attributes: {
+              name: "casa-azul-1.jpeg",
+              alternativeText: "casa-azul-1.jpeg",
+              url: "https://qzxcfcpyemrhuakuymvj.supabase.co/storage/v1/object/public/jebem/casa-azul/1.jpeg",
+            },
+          },
+        },
+        {
+          data: {
+            attributes: {
+              name: "casa-azul-1.jpeg",
+              alternativeText: "casa-azul-1.jpeg",
+              url: "https://qzxcfcpyemrhuakuymvj.supabase.co/storage/v1/object/public/jebem/casa-azul/2.jpeg",
+            },
+          },
+        },
+        {
+          data: {
+            attributes: {
+              name: "casa-azul-1.jpeg",
+              alternativeText: "casa-azul-1.jpeg",
+              url: "https://qzxcfcpyemrhuakuymvj.supabase.co/storage/v1/object/public/jebem/casa-azul/3.jpeg",
+            },
+          },
+        },
+        {
+          data: {
+            attributes: {
+              name: "casa-azul-1.jpeg",
+              alternativeText: "casa-azul-1.jpeg",
+              url: "https://qzxcfcpyemrhuakuymvj.supabase.co/storage/v1/object/public/jebem/casa-azul/4.jpeg",
+            },
+          },
+        },
+        {
+          data: {
+            attributes: {
+              name: "casa-azul-1.jpeg",
+              alternativeText: "casa-azul-1.jpeg",
+              url: "https://qzxcfcpyemrhuakuymvj.supabase.co/storage/v1/object/public/jebem/casa-azul/5.jpeg",
+            },
+          },
+        },
+        {
+          data: {
+            attributes: {
+              name: "casa-azul-1.jpeg",
+              alternativeText: "casa-azul-1.jpeg",
+              url: "https://qzxcfcpyemrhuakuymvj.supabase.co/storage/v1/object/public/jebem/casa-azul/6.jpeg",
+            },
+          },
+        },
+        {
+          data: {
+            attributes: {
+              name: "casa-azul-1.jpeg",
+              alternativeText: "casa-azul-1.jpeg",
+              url: "https://qzxcfcpyemrhuakuymvj.supabase.co/storage/v1/object/public/jebem/casa-azul/7.jpeg",
+            },
+          },
+        },
+      ],
+      features: {
+        id: 2, // importante
+        name: "Casa en venta",
+        description: "Casa en venta. Xpujil Calakml, 388.25 m2. ¡Aprovecha!",
+        image:
+          "https://qzxcfcpyemrhuakuymvj.supabase.co/storage/v1/object/public/jebem/casa-azul/3.jpeg",
+        imagePosition: "right",
+        imageAlt: "Logo Jebem",
+        theme: "", // default
+        items: [
+          {
+            title: "Dirección",
+            description:
+              "#20 entre Edzna y Altamira. Xpujil, Calakmul. Campeche. CP: 24640",
+          },
+          {
+            title: "Precio de venta",
+            description: "$650,000 MXN",
           },
           {
             title: "Contácto",
