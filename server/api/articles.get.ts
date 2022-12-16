@@ -224,7 +224,7 @@ export default defineEventHandler(() => {
         title: "¡Oportunidad! Terreno para construcción",
         excerpt: "Precio: $1,000,000 MXN",
         slug: "terreno-1h",
-        body: "<strong>Precio: </strong> $1,000,000 MXN <br> Terreno valdio, 100m x 100m",
+        body: "<strong>Precio: </strong> $1,000,000 MXN <br> Terreno valdio, 40m x 40m",
         createdAt: "2022-11-07T22:07:44.308Z",
         updatedAt: "2022-11-13T03:57:54.051Z",
         publishedAt: "2022-12-07T22:10:22.775Z",
@@ -303,7 +303,7 @@ export default defineEventHandler(() => {
       features: {
         id: 3, // importante
         name: "Terreno para construcción",
-        description: "Terreno en venta. Xpujil Calakmul, 1,000 m2. ¡Aprovecha!",
+        description: "Terreno en venta. Xpujil Calakmul, 1,600 m2. ¡Aprovecha!",
         image:
           "https://qzxcfcpyemrhuakuymvj.supabase.co/storage/v1/object/public/jebem/terreno-1h/3.jpeg",
         imagePosition: "right",
@@ -334,7 +334,7 @@ export default defineEventHandler(() => {
     {
       id: 4,
       attributes: {
-        title: "¡Oportunidad para centro comercial! Terreno",
+        title: "¡Oportunidad para centro comercial! Terreno de 10,000 m2",
         excerpt: "Precio: $7,500,000 MXN",
         slug: "terreno-hh",
         body: "<strong>Precio: </strong> $7,500,000 MXN <br> Terreno con excelente ubicación",
@@ -425,15 +425,16 @@ export default defineEventHandler(() => {
         items: [
           {
             title: "Descripción",
-            description: "oportunidad para construir centro comercial",
+            description:
+              "100m x 100m. Oportunidad para construir centro comercial",
           },
           {
             title: "Dirección",
-            description: "Xpujil, Calakmul. Campeche. CP: 24640",
+            description: "Av. Calakmul, Xpujil, Calakmul. Campeche. CP: 24640",
           },
           {
             title: "Precio de venta",
-            description: "$1,000,000 MXN",
+            description: "$7,500,000 MXN",
           },
           {
             title: "Contácto",
